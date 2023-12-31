@@ -1,0 +1,104 @@
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  text-align: center;
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 500px) {
+  body,
+  .img {
+    background-position: center;
+    height: 600px;
+  }
+
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .firstbox,
+  .secbox {
+    width: 100%;
+  }
+
+  .firstbox > div,
+  .secbox > div {
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    border: solid black 2px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50px;
+  }
+
+  .logo > div {
+    border: solid black 2px;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto; /* Centered the logo */
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .logo {
+    display: flex;
+    border: solid black 2px;
+    width: 40%;
+    height: auto;
+    position: relative;
+    top: 80px;
+    margin: auto; /* Centered the logo on large screens */
+  }
+
+  .logo > div {
+    border: solid black 2px;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    margin-left: 20%; /* Centered the logo with column gap */
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 500px; /* Adjust as needed */
+  margin: auto; /* Center content */
+  padding: 10px;
+  border: solid rgb(228, 12, 12) 2px;
+  height: auto;
+  position: relative;
+  top: 20px; /* Adjusted height to be responsive */
+}
+
+.firstbox,
+.secbox {
+  width: 100%;
+  height: auto; /* Adjusted height to be responsive */
+
+  display: flex;
+  box-sizing: border-box;
+  column-gap: 10px;
+}
+
+.firstbox > div,
+.secbox > div {
+  border: solid black 2px;
+  width: 100%; /* Adjusted to fill the container */
+  height: 100px;
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.secbox {
+  padding-top: 10px;
+}
